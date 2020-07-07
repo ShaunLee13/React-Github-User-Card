@@ -31,10 +31,9 @@ class App extends React.Component {
     }
     return (
       <div className="App">
-        <h1>Hello</h1>
+        <h1>GitHub User Cards</h1>
         <UserCard 
-        user={this.state.user}
-        open={this.followerClick}/>
+        user={this.state.user}/>
         <FollowerCard 
         followers={this.state.followers}/>
       </div>

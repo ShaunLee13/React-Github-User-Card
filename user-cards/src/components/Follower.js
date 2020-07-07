@@ -7,9 +7,16 @@ class Follower extends React.Component {
     }
 
     render() {
+        //avatar_url, url, login
         return(
             <div className='follower'>
-                <p>I am a follower; details will go here when I have API requests again!</p>
+                <img 
+                    className='follow-avatar'
+                    alt={`Follower Avatar ${this.props.details.id}`} 
+                    src={this.props.details.avatar_url}
+                />
+                <h3>GitHub Handle: {this.props.details.login}</h3>
+                <a href={this.props.details.html_url}>Link to GitHub</a>
             </div>
         )
     }

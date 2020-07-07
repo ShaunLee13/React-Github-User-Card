@@ -7,11 +7,13 @@ class UserCard extends React.Component {
     }
 
     render() {
-        console.log(this.props.user.login)
         return(
             <div className='user-card'>
                 <div className='user hook'>
-                    <img alt='User Avatar' src={this.props.user.avatar_url}/>
+                    <img 
+                        className='user-avatar'
+                        alt='User Avatar' 
+                        src={this.props.user.avatar_url}/>
 
                     <h2 id='name'>
                         Name: {this.props.user.name}
@@ -20,6 +22,8 @@ class UserCard extends React.Component {
                     <h3 id='handle'>
                         GitHub Handle: {this.props.user.login}
                     </h3>
+
+                    <a href={this.props.user.html_url}>GitHub Profile</a>
                 </div>
                 <div className='user about'>
                     <p id='bio'>
